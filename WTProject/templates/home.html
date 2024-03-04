@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    {% for post in posts %}
+        <article class="media content-section">
+          <div class="media-body">
+            <div class="article-metadata">
+              <a class="mr-2" href="#">Meeting Owner : {{ post.meeting_owner }}</a>
+            </div>
+            <h2><a class="article-title" href=" {{ url_for('meeting', meeting_id=post['id']) }}">Topic : {{ post.topic }}</a></h2>
+            <p class="article-metadata">Location : {{ post.location }}</p>
+             <div>
+              <small class="text-muted">Start At : {{ post.start_date }}</small>
+              <small class="text-muted" style="float:right">End At : {{ post.end_date }}</small>
+            </div>
+          </div>
+        </article>
+    {% endfor %}
+{% endblock content %}
