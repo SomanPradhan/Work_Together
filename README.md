@@ -18,3 +18,5 @@ source venv/bin/activate (for mac and linux)
 
 Install requirement Dependcies:
 pip install -r requirements.txt
+
+flask run to run the app
